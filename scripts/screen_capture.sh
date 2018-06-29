@@ -9,7 +9,7 @@ main() {
 	if supported_tmux_version_ok; then
 		local file
 		file=$(expand_tmux_format_path "${screen_capture_full_filename}")
-		tmux capture-pane -J -p > "${file}"
+		tmux capture-pane -J -p -e > "${file}"
 		remove_empty_lines_from_end_of_file "${file}"
 		display_message "Screen capture saved to ${file}"
 	fi
