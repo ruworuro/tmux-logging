@@ -33,7 +33,7 @@ logging_filename=${logging_filename:-$default_logging_filename}
 logging_full_filename="${logging_path}/${logging_filename}"
 
 # Screen capture options
-default_screen_capture_path="$HOME"
+default_screen_capture_path="$HOME/colector/tmux_logs"
 screen_capture_path=$(tmux show-option -gqv "@screen-capture-path")
 screen_capture_path=${screen_capture_path:-$default_screen_capture_path}
 
@@ -44,7 +44,7 @@ screen_capture_filename=${screen_capture_filename:-$default_screen_capture_filen
 screen_capture_full_filename="${screen_capture_path}/${screen_capture_filename}"
 
 # Save complete history options
-default_save_complete_history_path="$HOME"
+default_save_complete_history_path="$HOME/colector/tmux_logs"
 save_complete_history_path=$(tmux show-option -gqv "@save-complete-history-path")
 save_complete_history_path=${save_complete_history_path:-$default_save_complete_history_path}
 
